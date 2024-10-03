@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <!-- social links for refinedguides.com -->
+    <script src="https://refinedguides.com/assets/social.js?linkColor=%2310a7d8&textColor=%23333" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task List</h1>
+    </div>
+
+    <div class="container columns">
+      <div class="column">
+        <div class="column-title">
+          <h3 data-tasks="0">To Do</h3>
+          <button data-add><i class="bi bi-plus"></i></button>
+        </div>
+        <div class="tasks"></div>
+      </div>
+      <div class="column">
+        <div class="column-title">
+          <h3 data-tasks="0">In Progress</h3>
+          <button data-add><i class="bi bi-plus"></i></button>
+        </div>
+        <div class="tasks"></div>
+      </div>
+      <div class="column">
+        <div class="column-title">
+          <h3 data-tasks="0">For Review</h3>
+          <button data-add><i class="bi bi-plus"></i></button>
+        </div>
+        <div class="tasks"></div>
+      </div>
+      <div class="column">
+        <div class="column-title">
+          <h3 data-tasks="0">Done</h3>
+          <button data-add><i class="bi bi-plus"></i></button>
+        </div>
+        <div class="tasks"></div>
+      </div>
+    </div>
+
+    <dialog class="confirm-modal">
+      <form method="dialog">
+        <h3>Delete Task?</h3>
+        <p>You are about to delete the ff. task</p>
+        <div class="preview"></div>
+
+        <menu>
+          <button type="button" id="cancel">Cancel</button>
+          <button type="submit" id="confirm">Yes, delete it.</button>
+        </menu>
+      </form>
+    </dialog>
+    </footer>
+  </body>
+</html>
